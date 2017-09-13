@@ -20,6 +20,8 @@ pacman --noconfirm -S --needed \
 
 pacman -Sc --noconfirm
 
+# https://github.com/Alexpux/MINGW-packages/issues/2879
+export GIT_SSL_NO_VERIFY=1
 git submodule update --init --recursive
 (cd pygobject; git checkout master; git pull)
 cd pygobject
